@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coordinates converter</title>
+    <style>
+        body {
+         background: rgb(243, 243, 243);
+         color: rgb(15, 46, 5);
+        }
+       </style>
+</head>
+<body>
+    <h1>GPS-coordinates converter</h1>
+    <p>Converts any coordinates to other formats.</p>  
+
+<form action="" method="POST">   
+    {% csrf_token %}
+    {{ form_field }}
+    <input type="Submit" name='submit' value="Convert"/>
+</form>
+
+{% if submitbutton == "Convert" %}
+<p>Another format: {{ convert1 }}</p>
+<p>Another format: {{ convert2 }}</p>
+{% endif %}
+
+</body>
+</html>
